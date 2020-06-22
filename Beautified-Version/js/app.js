@@ -68,7 +68,7 @@ function Application() {
         // Change type to "bar", "area", "spline", "pie",etc.
         bevelEnabled: true,
         type: "column",
-        toolTipContent: "<img src=\"graphics/\"{label}.gif\"\" style=\"width:40px; height:20px;\"> <br><b>{label}</b>: {y}",
+        toolTipContent: "<img src=\"../graphics/\"{label}.gif\"\" style=\"width:40px; height:20px;\"> <br><b>{label}</b>: {y}",
         dataPoints: [
           { label: weathers[0],  y: visits[0]  },
           { label: weathers[1], y: visits[1]  },
@@ -94,7 +94,7 @@ function Application() {
       data: [{
         type: "pie",
         startAngle: 25,
-        toolTipContent: "<img src=\"graphics/\"{label}.gif\"\" style=\"width:40px; height:20px;\"> <br> <b>{label}</b>: {y}%",
+        toolTipContent: "<img src=\"../graphics/\"{label}.gif\"\" style=\"width:40px; height:20px;\"> <br> <b>{label}</b>: {y}%",
         showInLegend: "true",
         legendText: "{label}",
         indexLabelFontSize: 16,
