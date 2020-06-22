@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+
+body {
+  /*
+  background: linear-gradient(-45deg, #ffffff, #fffee3, #dbdbdb, #d9ffdf);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  */
+
+  margin: 0;
+  font-family: 'Exo', sans-serif;
+}
+
+/*
+@keyframes gradient {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+*/
+
+summary {
+  text-align: center;
+  font-family: inherit;
+  font-size: 30px;
+  margin-bottom:1em;
+}
+
+summary:hover {
+  border-color: rgba(255,255,255,1);
+  cursor: pointer;
+}
+
+button:hover {
+  border-color: rgba(255,255,255,1);
+}
+
+circle:hover {
+  cursor: pointer;
+}
+
+#contents {
+  padding: 1em;
+}
+
+.navbar-nav > li > a {
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.navbar-nav a {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  cursor: pointer;
+}
+
+h4 {
+  margin-top:1em;
+  font-family: inherit;
+  font-weight: 700;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td, th {
+  margin: 0px;
+  padding: 2px;
+  text-align:center;
+}
+
+input {
+  box-shadow: 2px 2px 5px #ddd;
+  border: 1px solid silver;
+  height: 24px;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin: 4px;
+  type: hidden;
+}
+
+input[type=submit], input[type=button] {
+  border-radius: 2px;
+  color: #444;
+  margin: 0px 5px;
+  min-height: 29px;
+  min-width: 65px;
+  -webkit-user-select: none;
+  padding: 8px 13px;
+  background-image: -webkit-linear-gradient(#ededed, #ededed 38%, #dedede);
+  text-shadow: 0 1px 0 rgb(240, 240, 240);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08), inset 0 1px 2px rgba(255, 255, 255, 0.75);
+}
+
+input[type=submit] {
+  font-weight: bold;  
+}
+
+#left {
+  display: inline-block;
+  width: 50%;
+  margin: 0;
+}
+
+#right {
+  display: inline-block;
+  width: 50%;
+  margin: 0;
+}
+
+#matrix input {
+  width: 4em;
+}
+
+#graph svg circle {
+  cursor: pointer;
+}
+
+#graph svg text {
+  cursor: pointer;
+}
+
+#stats table {
+  border: none;
+}
+
+#stats table th {
+  border-bottom: 1px solid black;
+  /* text-align: right; */
+}
+
+#stats td {
+  /* text-align: right; */
+  width: 50px;  
+}
+
+#stats td:first-child {
+  width: 100px;
+  text-align: left;
+}
+
+#distr td {
+  text-align: left;
+}
+  
+#buttons {
+  font-size: 11pt;
+}
+
+#buttons span {
+  margin-left: 1em;
+}
+
+#buttons input {
+  width: 4.4em;
+  margin-left: auto;
+}
+  
+#title {
+  text-align: left;
+  padding-bottom: 1em;
+}
+
+#title h2 {
+  margin: 0;
+}
+
+.bs-callout {
+  margin: 20px 0;
+  padding: 20px;
+  border-left: 3px solid #eee;
+  text-align: justify;
+}
+
+.bs-callout-description {
+  background-color: #fcf8f2;
+  border-color: #f0ad4e;
+}
+
+.bs-callout-description h4 {
+  color: #f0ad4e;
+}
+
+/* Base styles for the element that has a tooltip */
+[data-tooltip],
+.tooltip {
+  position: relative;
+  cursor: pointer;
+}
+
+/* Base styles for the entire tooltip */
+[data-tooltip]:before,
+[data-tooltip]:after,
+.tooltip:before,
+.tooltip:after {
+  position: absolute;
+  visibility: hidden;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -webkit-transition: 
+      opacity 0.2s ease-in-out,
+        visibility 0.2s ease-in-out,
+        -webkit-transform 0.2s cubic-bezier(0.71, 1.7, 0.77, 1.24);
+    -moz-transition:    
+        opacity 0.2s ease-in-out,
+        visibility 0.2s ease-in-out,
+        -moz-transform 0.2s cubic-bezier(0.71, 1.7, 0.77, 1.24);
+    transition:         
+        opacity 0.2s ease-in-out,
+        visibility 0.2s ease-in-out,
+        transform 0.2s cubic-bezier(0.71, 1.7, 0.77, 1.24);
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform:    translate3d(0, 0, 0);
+  transform:         translate3d(0, 0, 0);
+  pointer-events: none;
+}
+
+/* Show the entire tooltip on hover and focus */
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after,
+[data-tooltip]:focus:before,
+[data-tooltip]:focus:after,
+.tooltip:hover:before,
+.tooltip:hover:after,
+.tooltip:focus:before,
+.tooltip:focus:after {
+  visibility: visible;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+
+/* Base styles for the tooltip's directional arrow */
+.tooltip:before,
+[data-tooltip]:before {
+  z-index: 1001;
+  border: 6px solid transparent;
+  background: transparent;
+  content: "";
+}
+
+/* Base styles for the tooltip's content area */
+.tooltip:after,
+[data-tooltip]:after {
+  z-index: 1000;
+  padding: 8px;
+  width: 160px;
+  background-color: #000;
+  background-color: hsla(0, 0%, 20%, 0.9);
+  color: #fff;
+  content: attr(data-tooltip);
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+/* Directions */
+
+/* Top (default) */
+[data-tooltip]:before,
+[data-tooltip]:after,
+.tooltip:before,
+.tooltip:after,
+.tooltip-top:before,
+.tooltip-top:after {
+  bottom: 100%;
+  left: 50%;
+}
+
+[data-tooltip]:before,
+.tooltip:before,
+.tooltip-top:before {
+  margin-left: -6px;
+  margin-bottom: -12px;
+  border-top-color: #000;
+  border-top-color: hsla(0, 0%, 20%, 0.9);
+}
+
+/* Horizontally align top/bottom tooltips */
+[data-tooltip]:after,
+.tooltip:after,
+.tooltip-top:after {
+  margin-left: -80px;
+}
+
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after,
+[data-tooltip]:focus:before,
+[data-tooltip]:focus:after,
+.tooltip:hover:before,
+.tooltip:hover:after,
+.tooltip:focus:before,
+.tooltip:focus:after,
+.tooltip-top:hover:before,
+.tooltip-top:hover:after,
+.tooltip-top:focus:before,
+.tooltip-top:focus:after {
+  -webkit-transform: translateY(-12px);
+  -moz-transform:    translateY(-12px);
+  transform:         translateY(-12px); 
+}
+
+.glow {
+  color: #fff;
+  -webkit-animation: glow 2s ease-in-out infinite alternate;
+  -moz-animation: glow 2s ease-in-out infinite alternate;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 0.5px rgb(117, 117, 117), 0 0 2px rgb(82, 82, 82), 0 0 3px rgb(82, 82, 82), 0 0 4px rgb(82, 82, 82), 0 0 5px rgb(82, 82, 82), 0 0 6px rgb(82, 82, 82), 0 0 7px rgb(82, 82, 82);
+  }
+  to {
+    text-shadow: 0 0 1px rgb(92, 92, 92), 0 0 3px #6e5160, 0 0 4px #6e5160, 0 0 5px #6e5160, 0 0 6px #6e5160, 0 0 7px #6e5160, 0 0 8px #6e5160;
+  }
+}
