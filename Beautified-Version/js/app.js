@@ -294,11 +294,11 @@ function Application() {
       return function(value) {
 
         //
-        /*
+
         i++;
         edge.setAttribute("stroke", colors[ii]);
         if (i % app.nstates == 0) { ii++; }
-        */
+
         //console.log(i);
         //
 
@@ -469,7 +469,7 @@ function Application() {
       text.setAttribute("text-anchor", "middle");
 
 
-      //var textNode = document.createTextNode(colors[from]);
+      var textNode = document.createTextNode(colors[from]);
       var textNode = document.createTextNode(weathers[from]);
       text.appendChild(textNode);
 

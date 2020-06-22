@@ -41,11 +41,11 @@ function ModelInput(model, valueName) {
     modelInput.element.setAttribute("value", newValue);
     modelInput.element.setAttribute("maxlength", 5);
 
-    /*
+
     if (valueName != "speed") {
       modelInput.element.setAttribute("readonly", "");
     }
-    */
+
   };
   
   this.onChange = function () {
