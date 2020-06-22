@@ -437,7 +437,7 @@ function Application() {
 
         svg.appendChild(edge);
 
-        //svg.appendChild(text);
+        svg.appendChild(text);
 
         // svg.selectAll("*").remove();
       }
